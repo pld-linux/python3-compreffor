@@ -6,7 +6,7 @@ Summary:	CFF table subroutinizer for FontTools
 Summary(pl.UTF-8):	Generator podprocedur tablic CFF dla FontTools
 Name:		python3-compreffor
 Version:	0.5.1.post1
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/compreffor/
