@@ -1,0 +1,17 @@
+fontTools glyph set objects have no _glyph attribute; compreffor --check
+died with AttributeError, use the CharStrings of the glyph set instead
+
+diff -urN compreffor-0.6.0.orig/src/python/compreffor/test/util.py compreffor-0.6.0/src/python/compreffor/test/util.py
+--- compreffor-0.6.0.orig/src/python/compreffor/test/util.py	2025-12-01 15:05:02.000000000 +0100
++++ compreffor-0.6.0/src/python/compreffor/test/util.py	2026-11-12 01:30:47.027845000 +0100
+@@ -38,8 +38,8 @@
+ 
+     passed = True
+     for g in orig_gset.keys():
+-        orig_glyph = orig_gset[g]._glyph
+-        comp_glyph = comp_gset[g]._glyph
++        orig_glyph = orig_gset.charStrings[g]
++        comp_glyph = comp_gset.charStrings[g]
+         orig_glyph.decompile()
+         if not (orig_glyph.program == comp_glyph.program):
+             log.warning("Difference found in glyph '%s'" % (g,))
